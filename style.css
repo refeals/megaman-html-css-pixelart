@@ -1,14 +1,17 @@
 #pixel-art {
+  --columns: 21;
+  --rows: 24;
+  --pixel-size: 12px;
   display: grid;
-  grid-template-columns: repeat(21, 1fr);
-  grid-template-rows: repeat(24, 1fr);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
   grid-gap: 0px;
-  width: calc(21 * 12px);
-  height: calc(24 * 12px);
+  width: calc(var(--columns) * var(--pixel-size));
+  height: calc(var(--rows) * var(--pixel-size));
 }
 
 #pixel-art>div {
-  width: 12px;
-  height: 12px;
+  width: var(--pixel-size);
+  height: var(--pixel-size);
   background-color: transparent;
 }
